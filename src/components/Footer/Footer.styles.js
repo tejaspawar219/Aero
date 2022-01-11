@@ -36,10 +36,12 @@ export const SocialMedia=styled.div`
 `
 export const Address=styled.div`
     text-align: center;
+    margin: 50px 0;
+    width:10%0%;
 `
 export const FootLogo=styled.img`
     height: 100px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 `
 export const Text=styled.div`
     width: 450px;
@@ -47,6 +49,7 @@ export const Text=styled.div`
     @media (max-width: 980px){
         text-align: center;
         padding-bottom: 30px;
+        width:95%;
    }
 
 `

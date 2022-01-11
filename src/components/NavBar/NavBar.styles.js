@@ -3,11 +3,16 @@ import styled from 'styled-components';
 
 export const Container=styled.div`
     background-color: rgb(10,8,47,1);
+    padding: 20px 0;
      width: 100%;
      display: flex;
      justify-content: center;
      position: fixed;
      z-index: 1;
+     @media only screen and (max-width:750px)
+     {
+         padding:10px 0;
+     }
 `
 
 export const Wrapper = styled.div`  
@@ -22,12 +27,12 @@ export const Wrapper = styled.div`
 export const Logo=styled.img`
 height: 70px;
 cursor:pointer;
+@media only screen and (max-width:500px){
+    height:45px;
+}
 `
-
   
 export const NavLinks=styled.div`
-    color:#fff;
-    opacity: 1;
     display: flex;
     width: 70%;
     justify-content: space-between;

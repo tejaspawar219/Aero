@@ -3,7 +3,7 @@ import NavBar from '../components/NavBar'
 import SponsorsLogos from '../components/SponsorsLogos'
 import WhySponsorUs from '../components/WhySponsorUs'
 import Footer from '../components/Footer'
-import { PageStyle } from './styles'
+import { PageStyle,Page } from './styles'
 import SponsorshipDeliverables from '../components/SponsorshipDeliverables'
 import KeyExpenses from '../components/KeyExpenses'
 function Sponsors() {
@@ -11,11 +11,13 @@ function Sponsors() {
           <>
           <PageStyle>
                <NavBar/>
-               <SponsorsLogos/>
-               <WhySponsorUs/>
-               <SponsorshipDeliverables/>
-               <KeyExpenses/>
-               <Footer/>
+               <Page>
+                    <SponsorsLogos/>
+                    <WhySponsorUs/>
+                    <SponsorshipDeliverables/>
+                    <KeyExpenses/>
+                    <Footer/>
+               </Page>
           </PageStyle>
           </>
      )

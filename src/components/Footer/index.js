@@ -1,5 +1,6 @@
 import React from 'react';
-import { Container, Wrapper ,SocialMedia,Address, FootLogo,Text,Icon} from './Footer.styles';
+import { Container, Wrapper ,SocialMedia,Address, FootLogo,Text} from './Footer.styles';
+import { Content } from '../../pages/styles';
 import Logo from '../../assets/Logo.png'
 
 function Footer(props) {

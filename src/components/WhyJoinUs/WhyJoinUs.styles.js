@@ -2,38 +2,60 @@ import styled from "styled-components";
 
 export const Container=styled.div`
      height: auto;
-     padding: 50px 0;
      margin: 50px 0;
-`
-
-export const Wrapper=styled.div`
-     width: 85%;
-     height: auto;
-     margin: auto;
-     max-width: 1200px;
-     display: flex;
-     justify-content:center;
-     color:white;
-     @media only screen and (max-width:1200px)
+     display:flex;
+     width:100%;
+     @media only screen and (max-width:1250px)
      {
-          flex-direction: column;
-          align-items: center;
+          margin: 10px 0;
+          flex-direction:column;
      }
 `
+
 
 export const Title=styled.div`
      font-size:50px ;
      font-weight: 700;
+     @media only screen and (max-width:750px)
+     {
+          font-size:35px;
+          
+     }
+     @media only screen and (max-width:500px)
+     {
+          font-size:25px;
+          text-align: center;
+     }
+`
+
+export const Group=styled.div`
+     width:50%;
+     display: flex;
+     flex-direction:row;
+     justify-content:space-around;
+     @media only screen and (max-width:1250px){
+          width:100%;
+     }
+     @media only screen and (max-width:650px){
+          flex-direction:column;
+     }
 `
 export const Section=styled.div`
      width: 25%;
      display: flex;
      flex-direction: column;
-     padding:70px 0;
+     padding:10px 0;
      align-items: center;
      i{
           font-size: 50px;
           color: white;
+     }
+     @media only screen and (max-width:1250px){
+          padding:40px 0px;
+     }
+     @media only screen and (max-width:650px)
+     {
+          width:100%;
      }
 `
 
@@ -44,4 +66,8 @@ export const Text=styled.div`
      color: white;
      line-height: 25px;
      width: 250px;
+     @media only screen and (max-width:500)
+     {
+          font-size: 17px;
+     }
 `
