@@ -5,6 +5,10 @@ export const Expenses=styled.div`
      justify-content:space-between;
      margin:60px 0;
      margin-left:20px;
+     flex-direction:row;
+     @media(max-width:750px){
+          flex-direction: column;
+     }
 `
 export const Cards=styled.div`
      display: flex;

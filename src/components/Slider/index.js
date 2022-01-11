@@ -9,16 +9,12 @@ import './styles.css'
   
 function Slider() {
   return (
-    <Wrapper style={{ display: 'block',padding:'10px auto'}} >
+    <Wrapper style={{ display: 'block',padding:'10px auto', maxWidth:'920px'}} >
       <Heading>UpComing Events</Heading>
       <Line/>
       <Carousel className='Slide' style={{width:'95%',margin:'auto'}}>
         <Carousel.Item interval={3000} >
             <img className="d-block w-100 " style={{aspectRatio: '16/9'}}  src={ImgPath1} alt="Image One"/>
-            <Carousel.Caption>
-                <h3>Third slide label</h3>
-                <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-            </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item interval={3000}>
             <img className="d-block w-100"  src={ImgPath2} alt="Image Two"/>
