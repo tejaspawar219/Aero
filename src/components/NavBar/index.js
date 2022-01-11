@@ -6,27 +6,14 @@ import {Navbar,Nav} from 'react-bootstrap'
 function index(props) {
      return (
           <div>
-             {/* <Container>
-                 <Wrapper>
-                      <a href="/"><Logo src={LogoImg}/></a>
-                      <NavLinks>
-                         <Nav>Our Team</Nav>
-                         <Nav href='/aboutus'>About Us</Nav>
-                         <Nav>Events</Nav>
-                         <Nav href='/sponsors'>Sponsors</Nav>
-                         <Nav>Contact</Nav>
-                         <Nav>Blog</Nav>
-                     </NavLinks>
-                 </Wrapper>
-               </Container> */}
                <Container>
                     <Wrapper>
-                         <Navbar variant='dark' expand='lg' sticky='top'>
+                         <Navbar variant='dark' expand='lg' sticky='top' style={{width:'100%'}}>
                               <Navbar.Brand>
                                    <a href='/'><Logo src={LogoImg}/></a>
                               </Navbar.Brand>
                               <Navbar.Toggle />
-                              <Navbar.Collapse>
+                              <Navbar.Collapse style={{justifyContent:'flex-end'}}>
                                    <Nav style={{alignSelf:'right'}}>
                                         <Nav.Link>Our Team</Nav.Link>
                                         <Nav.Link href='/aboutus'>About Us</Nav.Link>

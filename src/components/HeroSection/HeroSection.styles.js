@@ -11,23 +11,24 @@ export const Container=styled.div`
 export const Wrapper = styled.div`
      display:flex;
      align-items:center;
- npm    justify-content: space-between;
+     justify-content: space-between;
      width: 85%;
-     height: 29.375rem;
      max-width: 1200px;
      margin: auto;
      transition: .3s;
+     flex-direction: row;
+     padding-bottom: 30px;
+     @media (max-width: 760px){
+          flex-direction: column;
+     }
 `
-// export const Img=styled.div`
-//      width:40%;
-//      height:21.25rem;
-//      background-image: url(${Image});
-//      background-size: contain;
-//      background-repeat: no-repeat;
-// `
+
 
 export const Img=styled.img`
      width:45% ;
+     @media (max-width: 760px){
+          width: 100%;
+     }
 `
 
 export const Summary=styled.div`
@@ -35,6 +36,10 @@ width:55%;
 padding-left: 74px;
 color: white;
 font-size:22px ;
+@media (max-width: 760px){
+     width: 100%;
+     padding-top: 30px;
+}
 `
 
 export const Text=styled.div`

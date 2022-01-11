@@ -4,7 +4,6 @@ import styled from 'styled-components';
 export const Container=styled.div`
     background-color: rgb(10,8,47,1);
      width: 100%;
-     height: 7.5rem;
      display: flex;
      justify-content: center;
      position: fixed;
