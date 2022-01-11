@@ -14,6 +14,10 @@ export const Wrapper=styled.div`
     margin: auto;
     max-width: 1200px;
     color: white;
+    flex-direction: row;
+    @media (max-width: 980px){
+        flex-direction: column;
+   }
 `
 
 export const Contact=styled.div`
@@ -26,7 +30,7 @@ export const SocialMedia=styled.div`
     justify-content: flex-end;
     i{
         margin-left: 20px;
-        font-size: 50px;
+        font-size: 30px;
         color: white;
     }
 `
@@ -39,6 +43,10 @@ export const FootLogo=styled.img`
 `
 export const Text=styled.div`
     width: 450px;
-font-size:20px ;
+    font-size:20px ;
+    @media (max-width: 980px){
+        text-align: center;
+        padding-bottom: 30px;
+   }
 
 `

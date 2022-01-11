@@ -14,7 +14,7 @@ export const Wrapper=styled.div`
      display: flex;
      justify-content:center;
      color:white;
-     @media only screen and (max-width:750px)
+     @media only screen and (max-width:1200px)
      {
           flex-direction: column;
           align-items: center;
