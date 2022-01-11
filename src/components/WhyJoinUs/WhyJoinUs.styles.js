@@ -44,18 +44,20 @@ export const Section=styled.div`
      width: 25%;
      display: flex;
      flex-direction: column;
-     padding:10px 0;
      align-items: center;
      i{
           font-size: 50px;
           color: white;
      }
      @media only screen and (max-width:1250px){
-          padding:40px 0px;
+          padding:20px 0px;
      }
      @media only screen and (max-width:650px)
      {
           width:100%;
+          i{     
+          font-size: 40px;
+          }
      }
 `
 
@@ -66,8 +68,8 @@ export const Text=styled.div`
      color: white;
      line-height: 25px;
      width: 250px;
-     @media only screen and (max-width:500)
+     @media only screen and (max-width:500px)
      {
-          font-size: 17px;
+          font-size: 15px;
      }
 `
