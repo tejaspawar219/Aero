@@ -36,7 +36,7 @@ export const NavLinks=styled.div`
     display: flex;
     width: 70%;
     justify-content: space-between;
-    font-size: 20px;
+    font-size: 24px;
 `
 export const Nav=styled.a`
     text-decoration:none;

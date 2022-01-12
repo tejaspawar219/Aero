@@ -12,15 +12,15 @@ function index(props) {
                               <Navbar.Brand>
                                    <a href='/'><Logo src={LogoImg}/></a>
                               </Navbar.Brand>
-                              <Navbar.Toggle />
+                              <Navbar.Toggle style={{height:'80px',width:'80px'}} />
                               <Navbar.Collapse style={{justifyContent:'flex-end'}}>
                                    <Nav>
-                                        <Nav.Link>Our Team</Nav.Link>
-                                        <Nav.Link href='/aboutus'>About Us</Nav.Link>
-                                        <Nav.Link>Events</Nav.Link>
-                                        <Nav.Link href='/sponsors'>Sponsors</Nav.Link>
-                                        <Nav.Link>Contact</Nav.Link>
-                                        <Nav.Link>Blog</Nav.Link>
+                                        <Nav.Link style={{fontSize:'20px',padding:'10px 16px'}}>Our Team</Nav.Link>
+                                        <Nav.Link href='/aboutus' style={{fontSize:'20px',padding:'10px 16px'}}>About Us</Nav.Link>
+                                        <Nav.Link href='/events' style={{fontSize:'20px',padding:'10px 16px'}}>Events</Nav.Link>
+                                        <Nav.Link href='/sponsors' style={{fontSize:'20px',padding:'10px 16px'}}>Sponsors</Nav.Link>
+                                        <Nav.Link href='/contact' style={{fontSize:'20px',padding:'10px 16px'}}>Contact</Nav.Link>
+                                        <Nav.Link style={{fontSize:'20px',padding:'10px 16px'}}>Blog</Nav.Link>
                                    </Nav> 
                               </Navbar.Collapse>
                               
