@@ -11,7 +11,7 @@ function Contact() {
             <NavBar/>
             <Page>
                 <Feedback/>
-                {/* <Map/> */}
+                <Map/>
                 <Footer/>
             </Page>
         </PageStyle>
