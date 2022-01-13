@@ -3,7 +3,7 @@ import  {Heading, Line, Wrapper} from '../../pages/styles'
 
 function Map() {
     return (
-        <Wrapper style={{aspectRatio:'16/9'}}>
+        <Wrapper style={{aspectRatio:'3/2'}}>
             <Heading>Locate Us</Heading>
             <Line />
             <iframe

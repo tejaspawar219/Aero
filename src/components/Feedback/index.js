@@ -1,8 +1,9 @@
 import React,{useState} from 'react'
-import {Wrapper} from '../../pages/styles'
+import { Wrapper} from '../../pages/styles'
 import Swal from 'sweetalert2';
-import { Container } from './Feedback.styles';
+import { Container,Heading,FormContent } from './Feedback.styles';
 import emailjs from 'emailjs-com';
+import { Button, Form } from "react-bootstrap";
 
 const SERVICE_ID = "service_8yb4fau";
 const TEMPLATE_ID = "template_uha3mra";
@@ -32,15 +33,37 @@ function Feedback() {
     return (
         <Wrapper>
           <Container>
-            <form action="Post" onSubmit={handleOnSubmit}>
-                <label for="Name">Name</label>
-                <input type="text" placeholder='Name' id='form-input-control-name' name='name'/>
-                <label for="Email">Email</label>
-                <input type="text" placeholder='Email' id='form-input-control-email' name='email'/>
-                <label for="Contact">Name</label>
-                <input type="text" placeholder='Contact' id='form-input-control-contact' name='contact'/>
-                <button type='submit'> Submit</button>
-            </form>
+            <Heading>Feedback</Heading>
+            <FormContent>
+              <Form style={{padding:'20px'}} onSubmit={handleOnSubmit}>
+                <Form.Group className="mb-3" controlId="formBasicName">
+                <Form.Label style={{color:'White'}}>Name</Form.Label>
+                <Form.Control type="text" placeholder="Enter Name" name="name" />
+                </Form.Group>
+
+                <Form.Group className="mb-3" controlId="formBasicEmail">
+                <Form.Label style={{color:'White'}}>Email</Form.Label>
+                <Form.Control type="email" placeholder="Enter Email" name="email"/>
+                </Form.Group>
+
+                <Form.Group className="mb-3" controlId="formBasicContact">
+                <Form.Label style={{color:'White'}}>Contact</Form.Label>
+                <Form.Control type="text" placeholder="Enter Contact" name="contact"/>
+                </Form.Group>
+
+                <Form.Group className="mb-3" controlId="formBasicNotifications">
+                  <Form.Check type="checkbox" label="Get Notification from Us"  style={{color:'white'}} name='notification'/>
+                </Form.Group>
+                
+                <Form.Group className="mb-3" controlId="formBasicFeeback">
+                <Form.Label style={{color:'White'}}>Feedback</Form.Label>
+                <Form.Control as="textarea"  name="feedback" placeholder='Feedback'/>
+                </Form.Group>
+                <Button variant="primary" type="submit" style={{marginTop:'10px'}}>
+                Submit
+                </Button>
+              </Form>
+            </FormContent>
           </Container>
         </Wrapper>
     )

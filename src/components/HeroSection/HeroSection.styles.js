@@ -49,6 +49,11 @@ export const Button=styled.button`
      align-items: center;
      justify-content: center;
      font-size: 23px;
+     border:0px;
+     cursor:pointer;
+     :hover{
+          background-color: #9d2dff;
+     }
      @media only screen and (max-width:1000px)
      {
           height: 50px;
