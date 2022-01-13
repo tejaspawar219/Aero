@@ -39,7 +39,7 @@ export const Text=styled.div`
 
 `
 
-export const Button=styled.div`
+export const Button=styled.button`
      color: white;
      border-radius: 10px;
      background-color: #8800FF;
