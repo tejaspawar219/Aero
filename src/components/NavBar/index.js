@@ -33,6 +33,12 @@ function index(props) {
                   Events
                 </Nav.Link>
                 <Nav.Link
+                  href="/competitions"
+                  style={{ fontSize: "20px", padding: "10px 16px" }}
+                >
+                  Competitions
+                </Nav.Link>
+                <Nav.Link
                   href="/sponsors"
                   style={{ fontSize: "20px", padding: "10px 16px" }}
                 >
