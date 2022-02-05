@@ -1,4 +1,4 @@
-import React, {useLayoutEffect,useState} from 'react';
+import React from 'react';
 import { Page, PageStyle } from './styles'
 import NavBar from '../components/NavBar'
 import Footer from '../components/Footer'

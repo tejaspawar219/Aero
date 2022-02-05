@@ -1,0 +1,128 @@
+[
+    {
+        "id":1,
+        "year": "2019",
+        "date": "29th March 2019",
+        "speaker": "Mr. Rakesh Verma\\nPresident of Indian Aeromodellers Club (IAC) having 30 years of experience.",
+        "title": "Drone Designing Workshop",
+        "venue": "Stilt Area, RGIT",
+        "description": " AeroRGIT organised a Drone Designing Workshop to provide hands-on experience on designing, building and flying a drone"
+    },
+    {
+        "id":2,
+        "year": "2020",
+        "date": "16th August 2020",
+        "speaker": "Ms. Vinni Shah Modani\\nHead Counselor at Aara Education Consultancy, CA & CFP",
+        "title": "AARA Consultancy's career guidance webinar",
+        "venue": "Youtube",
+        "description": "Aara Education Consultancy is Indian as well as Abroad Education Consultancy catering to various countries like USA, UK, Canada, Australia, etc. The Speaker explained about various abroad studies options available after graduation. The live session crossed 400+ views."
+    },
+    {
+        "id":3,
+        "year": "2020",
+        "date": "26th & 27th September 2020",
+        "speaker": "Mr. Kartik Patil",
+        "title": "ANSYS Workshop",
+        "venue": "Google Meet",
+        "description": "AeroRGIT organised Ansys workshop for students of RGIT and foreign colleges aiming to provide them a good platform  for understanding simulation environment, various analysis techniques, types and enhance their analysis skills. The entries flooded with total 50 number of participants. The workshop covered topics as follows:\\n- Basic introduction of Ansys\\n- Static Structural Analysis\\n- Modal Analysis \\n- Thermal Analysis \\n- Explicit Dynamic Analysis "
+    },
+    {
+        "id":4,
+        "year": "2020",
+        "date": "24th November 2020",
+        "speaker": " Ms. Nikhitha C. \\nCEO, Co-founder of Society of Space Education, Research & Development (SSERD), Head of Mass Media & Communications at International Space University, Dr. Kalpana Chawla Scholar",
+        "title": "Space Talk",
+        "venue": "Google Meet",
+        "description": "The webinar organised was focused on Upcoming Space Revolution and Opportunities in Space. The Speaker unveiled the diverse opportunities available in Space domain providing in depth knowledge about history of space exploration. Also explained about current researches in this field."
+    },
+    {
+        "id":5,
+        "year": "2020",
+        "date": "5th December 2020",
+        "speaker": "Mr. Vikram D. Londhe\\nCo-founder of Natskies Observatory, TEDx Speaker, Fellow of Royal Astronomical Society, associate at International Astronomical Union",
+        "title": "MARS Exploration webinar",
+        "venue": "Google Meet",
+        "description": "The webinar focused on future Mars Exploration opportunities. The session was all about giving students an information of planet Mars and envisioning about Mars Civilization. Speaker also explained the importance of reusable rockets and ideology behind it by SpaceX. He also talked about rover technologies and how one can become part of such Mars Missions being an Indian student."
+    },
+    {
+        "id":6,
+        "year": "2021",
+        "date": "13th Feb 2021",
+        "speaker": "Mr. Sunny Kabrawala\\nCEO & Founder of STAR LABS, Space Entrepreneur, TEDx Speaker, Josh Talk Speaker",
+        "title": "Webinar on Space Education & Indian Space start-ups",
+        "venue": "Google Meet",
+        "description": "The session was all about giving students an information about the private space sectors and Indian Space start-ups. Speaker also explained about the need of such start-ups, their future scope and opportunities available for students in this sector."
+    },
+    {
+        "id":7,
+        "year": "2021",
+        "date": "20th February 2021",
+        "speaker": "Dr. Ajit Singh\\nHead of International Exams at Endeavor",
+        "title": "GRE & GMAT webinar ",
+        "venue": "Zoom Meeting",
+        "description": "The session was focused on information about the GRE & GMAT Exams. Speaker shared various strategies for preparations of these exams. He also discussed about various masters programs and how Endeavor helps student providing proper guidance."
+    },
+    {
+        "id":8,
+        "year": "2021",
+        "date": "8th March 2021",
+        "speaker": "Mrs. Anima Patil-Sabale\\nIndian-American NASA Scientist, Astronaut candidate, Project PoSSUM, Orion Spacecraft Simulations Lab Manager, NASA Johnson Space Center (Jacobs) xEMU Spacesuit Engineer, TEDx Speaker, HERA Mission Commander, Mars Analog Mission Commander, STEM Advocate",
+        "title": "Women's Day Celebration",
+        "venue": "Google Meet",
+        "description": "AeroRGIT was fortunate enough to have such a determined, talented, inspiring, down to earth, honest person as one of the resource person. Anima Ma'am shared her entire journey from dreaming to be an Astronaut to getting appointed as an Astronaut Candidate in NASA. She also discussed about the difficulties & challenges faced. The session was inspiring for all students having such great aspiration. The true meaning of Women's Day was delivered through this session!"
+    },
+    {
+        "id":9,
+        "year": "2021",
+        "date": "10th & 11th July 2021",
+        "speaker": "Mr. Rehan Ansari",
+        "title": "Computational Fluid Dynamics (CFD) Workshop",
+        "venue": "Google Meet",
+        "description": "AeroRGIT organised a two day workshop on Computational Fluid Dynamics (CFD). The entries flooded with 85 number of participants. The session covered topics as follows:\\n- Introduction to CFD Analysis\\n- Simulation of flow through an open pipe\\n- Steady state flow simulation over an Airfoil\\n- Flow simulation through Convergent-Divergent Nozzle\\n- Aerodynamic analysis of Tesla Cybertruck"
+    },
+    {
+        "id":10,
+        "year": "2021",
+        "date": "24th July 2021",
+        "speaker": "Dipti Pal & Mr. Sandeep Sharma",
+        "title": "DIMS MBA Webinar",
+        "venue": "Zoom Meeting",
+        "description": "The session was about various career options of studying in India and studying abroad. Further MIM, deferred MBA programs were introduced. "
+    },
+    {
+        "id":11,
+        "year": "2021",
+        "date": "21st August 2021",
+        "speaker": "Mr. Dhaval Kunte\\nAlumnus of SPIT, MBA, NMIMS, Center Manager",
+        "title": "IMS Crack the Career Code",
+        "venue": "Zoom Meeting",
+        "description": "The session covered a quick overview of CAT and other entrance exams for MBA with their preparation process and timeline. "
+    },
+    {
+        "id":12,
+        "year": "2021",
+        "date": "4th September 2021",
+        "speaker": "Mr. Rakesh Rai\\nDrone Instructor, Drone Pilot, MD - DHFL, Indian Institute Of Drone - Mumbai",
+        "title": "Webinar on Drone Technology & its future scope",
+        "venue": "Google Meet",
+        "description": "The speaker explained types of UAV's, their uses and the various purposes of drones in military field like surveying, mapping, patrolling, etc. He also explained the agenda about the importance of drone nowadays. "
+    },
+    {
+        "id":13,
+        "year": "2021",
+        "date": "4th-10th October 2021",
+        "speaker": "Various",
+        "title": "World Space Week 2021",
+        "venue": "",
+        "description": "Theme: Women in Space\\nWorld Space Week is an international celebration of science & technology, and their contribution to the betterment of human condition. AeroRGIT celebrated this space week to contribute a little in the awareness of this field. And thus various activities related to Aerospace field were conducted throughout the week. \\n\\n• Day 1: Space Talk \\nDate: 4th October 2021\\nSpeaker: Ms. Shweta Kulkarni\\nFellow of Royal Astronomical Society - England, Director - AstronEra, CEO - Astron SHK Trust\\nPlatform: Google Meet\\nThe dominant focus of the session was on the role of women in astronomy. Speaker also explained about dark matter, dark energy, scope of science communicator in India. \\n\\n• Day 2: Space Quiz\\nDate: 5th October 2021\\nPlatform: Round 1 - Extended Google Form\\nRound 2 - Quiziz\\nAll students were given a timed form in Round 1 and selected 17 students went for next round. Round 2 was a live quiz on Quiziz platform where students competed simultaneously and top three participants were ranked. All students showed great interest. \\n\\n• Day 3: Treasure Hunt\\nDate: 6th October 2021\\nPlatform: All social media handles of AeroRGIT & Aerozone\\nStudents were given 6 hours of time to solve all the clues and reach to the end of the hunt. All participants showed great enthusiasm. The top three with the right answers were ranked.\\n\\n• Day 4: Astrophotography Competition \\nDate: 7th October 2021\\nStudents showed great enthusiasm and provided with the best entries. The entries were evaluated on the basis of original work. The best three captures were selected and ranked.\\n\\n• Day 5: Essay Writing Competition\\nDate: 8th October 2021\\nTopic: A day as an Astronaut in Space\\nStudents showed great enthusiasm and provided with the best entries. The entries were evaluated on the basis of creativity, inclusion of all rules, imagination. The best three works were selected and ranked.\\n\\n• Day 6: Space Talk\\nDate: 9th October 2021\\nSpeaker: Mr. Siddharth Pandey\\nHead of Centre of Excellence in Astrobiology at Amity University, India\\nPlatform: Google Meet\\nThe speaker discussed about several recent, upcoming trends & developments in the Aerospace industry. He also explained about Amity Research Centre, research conducted by them and opportunities available for aspiring students. Overall the session was motivating and informative for all space enthusiasts. \\n\\n• Day 7: Poster Making Competition\\nDate: 10th October 2021\\nTopic: Women in Space\\nStudents showed great enthusiasm and provided with the best entries. The entries were evaluated on the basis of creativity, unique idea, original work and display of proper message. The best three designs were selected and ranked."
+    },
+    {
+        "id":14,
+        "year": "2021",
+        "date": "8th & 9th January 2022",
+        "speaker": "",
+        "title": "Stargazing Event",
+        "venue": "Malshej Ghat",
+        "description": "AeroRGIT in collaboration with Native Maniacs organised a Stargazing Event at Malshej Ghat. The event went successful with 54 enthusiastic participants. The inclusions were:\\nStargazing, Camping, Trekking, Travelling, Bonfire, Food, Other Activities. \\nAll participants enjoyed and learnt about stars, constellations, universe, astronomy, etc. All the Covid-19 related norms were followed and precautions were taken while conducting the event. This was the amazing experience for all the participants."
+    }
+]
