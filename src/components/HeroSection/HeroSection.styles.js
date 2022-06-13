@@ -39,7 +39,7 @@ export const Button = styled.button`
   border-radius: 10px;
   background-color: #8800ff;
   height: 63px;
-  width: 140px;
+  padding: 0 25px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -51,8 +51,7 @@ export const Button = styled.button`
   }
   @media only screen and (max-width: 1000px) {
     height: 50px;
-    width: 120px;
-    font-size: 19px;
+    font-size: 22px;
   }
   @media only screen and (max-width: 750px) {
     margin: auto;
@@ -60,7 +59,6 @@ export const Button = styled.button`
   @media only screen and (max-width: 500px) {
     margin: auto;
     height: 50px;
-    width: 120px;
-    font-size: 19px;
+    font-size: 15px;
   }
 `;

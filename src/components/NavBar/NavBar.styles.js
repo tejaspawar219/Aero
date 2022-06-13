@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 export const Container=styled.div`
     background-color: rgb(10,8,47,1);
-    padding: 20px 0;
+    padding: 10px 0;
      width: 100%;
      display: flex;
      justify-content: center;
@@ -16,7 +16,7 @@ export const Container=styled.div`
 `
 
 export const Wrapper = styled.div`  
-     width: 85%;
+    width: 85%;
     display: flex;
     justify-content: space-between;
     height: 100%;
@@ -25,10 +25,10 @@ export const Wrapper = styled.div`
 `
 
 export const Logo=styled.img`
-height: 70px;
+height: 60px;
 cursor:pointer;
 @media only screen and (max-width:500px){
-    height:45px;
+    height:40px;
 }
 `
   
@@ -36,7 +36,6 @@ export const NavLinks=styled.div`
     display: flex;
     width: 70%;
     justify-content: space-between;
-    font-size: 24px;
 `
 export const Nav=styled.a`
     text-decoration:none;

@@ -60,9 +60,11 @@ export const TimeLineContent=styled.div`
     @media only screen and (max-width: 700px){
         p{
             display: block;
+            font-size: 18px;
         }
         .outer{
-            width:100px;
+            width:80px;
+            height:40px;
         }
         .inner{
             display: none;
@@ -78,6 +80,9 @@ export const Title=styled.div`
     }
     @media only screen and (max-width:950px){
         font-size: 25px;
+    }
+    @media only screen and (max-width:480px){
+        font-size: 20px;
     }
 `
 export const Text=styled.div`
@@ -147,6 +152,8 @@ export const Summary=styled.div`
 `
 export const CompetitionImg=styled.img`
     width: 45%;
+    aspect-ratio:3/2;
+    cursor: pointer;
     @media only screen and (max-width: 700px)
     {
         width:80%;

@@ -13,6 +13,18 @@ export const Page=styled.div`
      }
 `
 
+export const PostWrapper=styled.div`
+     display: flex;
+     width: 90%;
+     justify-content: center;
+     height:auto;
+     max-width: 1200px;
+     margin: 100px auto;
+     flex-wrap: wrap;
+`
+export const Post=styled.div`
+     margin: 20px;
+`
 export const Wrapper = styled.div`
      display:flex;
      flex-direction:column;
@@ -51,12 +63,12 @@ export const Line=styled.hr`
      }
 `
 
-
 export const Content=styled.div`
      font-size:24px;
      color:white;
      width: 100%;
      padding-left:10px;
+     text-align: justify;
      @media only screen and (max-width:1200px)
      {
           padding-left: 0px;
@@ -67,7 +79,6 @@ export const Content=styled.div`
      }
      @media only screen and (max-width:900px)
      {
-          padding-left: 0px;
           font-size:17px;
           li{
                font-size:17px;
@@ -75,7 +86,6 @@ export const Content=styled.div`
      }
      @media only screen and (max-width:750px)
      {
-          padding-left: 0px;
           font-size:22px;
           li{
                font-size:22px;
@@ -84,9 +94,9 @@ export const Content=styled.div`
      @media only screen and (max-width:500px)
      {
           padding-left: 0px;
-          font-size:17px;
+          font-size:13px;
           li{
-               font-size:17px;
+               font-size:13px;
           }
      }
 `

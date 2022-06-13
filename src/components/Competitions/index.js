@@ -1,117 +1,93 @@
 import React from 'react';
 import {Wrapper} from '../../pages/styles'
 import ImgUrl from '../../assets/TechKriti.jpg'
-import ImgUrl2 from '../../assets/Competition.jpg'
 import {Title,Text,Circle,InnerCircle,Line,TimeLineContent, TimeLine,Competition,LeftSpace,Content,Summary,CenterSpace,CompetitionImg } from './Competitions.style';
+import { useState,useEffect } from 'react';
+import Carousel from "react-bootstrap/Carousel";
+
+import axios from 'axios'
+import { Modal } from 'react-bootstrap';
+
+
+function NewlineText(props) {
+    const text = props.text;
+    return text.split('\\n').map(str => <div style={{display:"block",color:"white",fontWeight:props.b?"700":"500"}}>{str}</div>);
+  }
+
+const CompetitionSlide=({show,handleClose,competition})=>{
+    const [images,setImages]=useState([])
+    useEffect(() => {
+      const fetchPosts=async ()=>{
+          const res=competition.length!==0?await axios.get("http://127.0.0.1:8000/compimg/"+competition.id):[];
+          setImages(res.data)
+      }
+      fetchPosts()
+    },[competition])
+    return(
+        <Modal show={show} onHide={handleClose} centered size='lg'>
+            <Carousel className="Slider" >
+            {
+                images?
+                images.map((item,index) => (
+                <Carousel.Item interval={3000} key={index}>
+                <img
+                    className="d-block w-100 "
+                    style={{ aspectRatio: "3/2",objectFit:"cover" }}
+                    src={"http://127.0.0.1:8000"+item.img}
+                    alt=""
+                />
+                </Carousel.Item>
+                )):<></>
+            }
+            </Carousel>
+        </Modal>
+    );
+    
+}
 
 function Competitions() {
+    const [show, setShow] = useState(false);
+    const [competitions,setCompetitions]=useState([])
+    const [competition,setCompetition]=useState([])
+    useEffect(() => {
+      const fetchPosts=async ()=>{
+          const res=await axios.get("http://127.0.0.1:8000/competition/");
+          setCompetitions(res.data)
+      }
+      fetchPosts()
+    },[])
+    const handleClose = () => setShow(false);
+    const handleSelectEvent = (index) => {setCompetition(competitions[index])};
+    
   return <Wrapper>
-  <Competition>
-      <TimeLine>
-          <TimeLineContent start>
-              <Line ends/>
-              <Circle className='outer'>
-                  <p>2022</p>
-                  <InnerCircle className='inner'/>
-              </Circle>
-          </TimeLineContent>
-      </TimeLine>
-      <LeftSpace/>
-      <Content>
-      <Summary>
-            <Title>SAE Aero Design Challenge East 2020 - March 2020</Title>
-            <Text>
-            SAE International Competition
-Location: Lakeland, Florida, USA
-Team AeroX participated in SAE International Regular class where the aim was to carry size 5 football as a cargo within the plane. 
-                <br/>
-                <b>》Overall Rank (Worldwide): 22nd </b>
-                <br/>
-                <b>》Asia Rank: 5th</b> 
-            </Text>
-        </Summary>
-          <CenterSpace/>
-          <CompetitionImg src={ImgUrl}/>
-      </Content>
-  </Competition>
-  <Competition>
-      <TimeLine>
-          <TimeLineContent>
-              <Line/>
-              <Circle className='outer'>
-                  <p>2022</p>
-                  <InnerCircle className='inner'/>
-              </Circle>
-          </TimeLineContent>
-      </TimeLine>
-      <LeftSpace/>
-      <Content rev>
-      <Summary>
-            <Title>International Planetary Aerial Systems Challenge (IPASC) 2021 - April 2021</Title>
-            <Text>
-                Location: Lakeland, Florida, USA
-                Team AeroX participated in SAE International Regular class where the aim was to carry size 5 football as a cargo within the plane. 
-                <br/>
-                <b>》Overall Rank (Worldwide): 5th </b>
-            </Text>
-        </Summary>
-          <CenterSpace/>
-          <CompetitionImg src={ImgUrl2}/>
-      </Content>
-  </Competition>
-  <Competition>
-      <TimeLine>
-          <TimeLineContent>
-              <Line/>
-              <Circle className='outer'>
-                  <p>2022</p>
-                  <InnerCircle className='inner'/>
-              </Circle>
-          </TimeLineContent>
-      </TimeLine>
-      <LeftSpace/>
-      <Content>
-      <Summary>
-            <Title>SAE Aero Design Challenge East 2020 - March 2020</Title>
-            <Text>
-            SAE International Competition
-Location: Lakeland, Florida, USA
-Team AeroX participated in SAE International Regular class where the aim was to carry size 5 football as a cargo within the plane. 
-                <br/>
-                <b>》Overall Rank (Worldwide): 22nd </b>
-                <br/>
-                <b>》Asia Rank: 5th</b> 
-            </Text>
-        </Summary>
-          <CenterSpace/>
-          <CompetitionImg src={ImgUrl}/>
-      </Content>
-  </Competition>
-  <Competition>
-      <TimeLine>
-          <TimeLineContent>
-              <Line ends/>
-              <Circle className='outer'>
-                  <p>2022</p>
-                  <InnerCircle className='inner'/>
-              </Circle>
-          </TimeLineContent>
-      </TimeLine>
-      <LeftSpace/>
-      <Content rev>
-      <Summary>
-            <Title>International Planetary Aerial Systems Challenge (IPASC) 2021 - April 2021</Title>
-            <Text>
-                Location: Lakeland, Florida, USA
-                Team AeroX participated in SAE International Regular class where the aim was to carry size 5 football as a cargo within the plane. 
-                <br/>
-                <b>》Overall Rank (Worldwide): 5th </b>
-            </Text>
-        </Summary>
-          <CenterSpace/>
-          <CompetitionImg src={ImgUrl2}/>
-      </Content>
-  </Competition>
+      <CompetitionSlide show={show} handleClose={handleClose} competition={competition}/>
+      {
+          competitions.map((comp,index)=>{
+            return(<Competition key={index}>
+                <TimeLine>
+                    <TimeLineContent start={index===0?true:false}>
+                        <Line ends={index===0||index===competitions.length-1?true:false}/>
+                        <Circle className='outer'>
+                            <p>{comp.year}</p>
+                            <InnerCircle className='inner'/>
+                        </Circle>
+                    </TimeLineContent>
+                </TimeLine>
+                <LeftSpace/>
+                <Content rev={index%2!==0?true:false} >
+                <Summary>
+                        <Title>{comp.competitionName}</Title>
+                        <Text>
+                            <NewlineText text={comp.competitionDesc} /><br/>
+                            <NewlineText b text={comp.achievements}/>
+                        </Text>
+                    </Summary>
+                    <CenterSpace/>
+                    <CompetitionImg src={comp.poster_img?`http://localhost:8000${comp.poster_img}`:ImgUrl} onClick={()=>{ handleSelectEvent(index);setShow(true)}}/>
+                </Content>
+            </Competition>)
+          })
+      }
   </Wrapper>;
 }
 

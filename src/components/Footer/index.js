@@ -30,10 +30,10 @@ function Footer(props) {
           </Text>
         </Address>
         <SocialMedia>
-          <i class="fas fa-envelope"></i>
-          <i class="fab fa-youtube"></i>
-          <i class="fab fa-instagram"></i>
-          <i class="fab fa-facebook"></i>
+          <i className="fas fa-envelope"></i>
+          <i className="fab fa-youtube"></i>
+          <i className="fab fa-instagram"></i>
+          <i className="fab fa-facebook"></i>
         </SocialMedia>
       </Wrapper>
     </Container>
