@@ -22,7 +22,7 @@ const EventInfo=({ show, handleClose, event})=>{
         setImages(res.data)
     }
     fetchPosts()
-  },[event])
+  },[event,BaseUrl])
 
   return(
   <Modal show={show} onHide={handleClose} centered size='md' >
@@ -67,7 +67,7 @@ function EventGrid() {
         setWorkshops(res.data)
     }
     fetchPosts()
-  },[])
+  },[BaseUrl])
 
   const handleClose = () => setShow(false);
   const handleSelectEvent = (index) => {setEvent(workshops[index])};

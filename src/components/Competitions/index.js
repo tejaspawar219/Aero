@@ -23,7 +23,7 @@ const CompetitionSlide=({show,handleClose,competition})=>{
           setImages(res.data)
       }
       fetchPosts()
-    },[competition])
+    },[competition,BaseUrl])
     return(
         <Modal show={show} onHide={handleClose} centered size='lg'>
             <Carousel className="Slider" >
@@ -57,7 +57,7 @@ function Competitions() {
           setCompetitions(res.data)
       }
       fetchPosts()
-    },[])
+    },[BaseUrl])
     const handleClose = () => setShow(false);
     const handleSelectEvent = (index) => {setCompetition(competitions[index])};
     
