@@ -14,7 +14,7 @@ function NewlineText(props) {
 
 const EventInfo=({ show, handleClose, event})=>{
   
-  const BaseUrl=process.env.REACT_APP_BASE_URL;
+  const BaseUrl=process.env.BACKEND_BASE_URL;
   const [images,setImages]=useState([])
   useEffect(() => {
     const fetchPosts=async ()=>{

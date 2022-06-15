@@ -15,7 +15,7 @@ function NewlineText(props) {
   }
 
 const CompetitionSlide=({show,handleClose,competition})=>{
-    const BaseUrl=process.env.REACT_APP_BASE_URL;
+    const BaseUrl=process.env.BACKEND_BASE_URL;
     const [images,setImages]=useState([])
     useEffect(() => {
       const fetchPosts=async ()=>{
@@ -47,7 +47,7 @@ const CompetitionSlide=({show,handleClose,competition})=>{
 }
 
 function Competitions() {
-    const BaseUrl=process.env.REACT_APP_BASE_URL;
+    const BaseUrl=process.env.BACKEND_BASE_URL;
     const [show, setShow] = useState(false);
     const [competitions,setCompetitions]=useState([])
     const [competition,setCompetition]=useState([])

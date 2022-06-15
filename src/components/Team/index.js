@@ -15,7 +15,7 @@ import "swiper/modules/scrollbar/scrollbar.min.css";
 
 import './styles.css'
 const Team = () => {
-  const BaseUrl=process.env.REACT_APP_BASE_URL;
+  const BaseUrl=process.env.BACKEND_BASE_URL;
   const [members, setMembers] = useState([]);
   const [advisor,setAdvisor]=useState([])
   const [captains,setCaptains]=useState([])
