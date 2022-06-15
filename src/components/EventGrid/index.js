@@ -13,10 +13,12 @@ function NewlineText(props) {
 }
 
 const EventInfo=({ show, handleClose, event})=>{
+  
+  const BaseUrl=process.env.REACT_APP_BASE_URL;
   const [images,setImages]=useState([])
   useEffect(() => {
     const fetchPosts=async ()=>{
-        const res=event.length!==0?await axios.get("http://127.0.0.1:8000/eveimg/"+event.id):[];
+        const res=event.length!==0?await axios.get(BaseUrl+"eveimg/"+event.id):[];
         setImages(res.data)
     }
     fetchPosts()
@@ -32,7 +34,7 @@ const EventInfo=({ show, handleClose, event})=>{
           <img
             className="d-block w-100 "
             style={{ aspectRatio: "3/2",objectFit:"cover" }}
-            src={"http://127.0.0.1:8000"+item.img}
+            src={BaseUrl+item.img}
             alt=""
           />
         </Carousel.Item>
@@ -53,6 +55,7 @@ const EventInfo=({ show, handleClose, event})=>{
 }
 
 function EventGrid() {
+  const BaseUrl=process.env.BACKEND_BASE_URL;
   const [show, setShow] = useState(false);
   const [event,setEvent] = useState([])
 
@@ -60,7 +63,7 @@ function EventGrid() {
   
   useEffect(() => {
     const fetchPosts=async ()=>{
-        const res=await axios.get("http://127.0.0.1:8000/event/");
+        const res=await axios.get(BaseUrl+"event/");
         setWorkshops(res.data)
     }
     fetchPosts()

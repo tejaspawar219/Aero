@@ -15,10 +15,11 @@ function NewlineText(props) {
   }
 
 const CompetitionSlide=({show,handleClose,competition})=>{
+    const BaseUrl=process.env.REACT_APP_BASE_URL;
     const [images,setImages]=useState([])
     useEffect(() => {
       const fetchPosts=async ()=>{
-          const res=competition.length!==0?await axios.get("http://127.0.0.1:8000/compimg/"+competition.id):[];
+          const res=competition.length!==0?await axios.get(BaseUrl+"compimg/"+competition.id):[];
           setImages(res.data)
       }
       fetchPosts()
@@ -33,7 +34,7 @@ const CompetitionSlide=({show,handleClose,competition})=>{
                 <img
                     className="d-block w-100 "
                     style={{ aspectRatio: "3/2",objectFit:"cover" }}
-                    src={"http://127.0.0.1:8000"+item.img}
+                    src={BaseUrl+item.img}
                     alt=""
                 />
                 </Carousel.Item>
@@ -46,12 +47,13 @@ const CompetitionSlide=({show,handleClose,competition})=>{
 }
 
 function Competitions() {
+    const BaseUrl=process.env.REACT_APP_BASE_URL;
     const [show, setShow] = useState(false);
     const [competitions,setCompetitions]=useState([])
     const [competition,setCompetition]=useState([])
     useEffect(() => {
       const fetchPosts=async ()=>{
-          const res=await axios.get("http://127.0.0.1:8000/competition/");
+          const res=await axios.get(BaseUrl+"competition/");
           setCompetitions(res.data)
       }
       fetchPosts()

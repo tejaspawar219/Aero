@@ -15,7 +15,7 @@ import "swiper/modules/scrollbar/scrollbar.min.css";
 
 import './styles.css'
 const Team = () => {
-  const path="http://127.0.0.1:8000/team/"
+  const BaseUrl=process.env.REACT_APP_BASE_URL;
   const [members, setMembers] = useState([]);
   const [advisor,setAdvisor]=useState([])
   const [captains,setCaptains]=useState([])
@@ -23,7 +23,7 @@ const Team = () => {
  
   useEffect(() => {
     const fetchMembers = async () => {
-      const res = await axios.get(path);
+      const res = await axios.get(BaseUrl+"team/");
       setAdvisor(res.data.filter(mem=>mem.role==="Faculty Advisor")[0])
       setMembers(res.data.filter(mem=>mem.role==="Team Member"))
       setCaptains(res.data.filter(mem=>mem.role==="Captain"||mem.role==="Vice Captain"))
@@ -31,7 +31,7 @@ const Team = () => {
     }
     fetchMembers();
     
-  }, []);
+  }, [BaseUrl]);
 
   
   return (
@@ -40,7 +40,7 @@ const Team = () => {
         advisor?
         <Container>
         <Member>
-            <Avatar src={"http://127.0.0.1:8000"+advisor.profileImg} />
+            <Avatar src={BaseUrl+advisor.profileImg} />
               <Name>{advisor.membername}<br/><i>({advisor.role})</i></Name>
             </Member>
         </Container>
@@ -51,7 +51,7 @@ const Team = () => {
         <Container style={{paddingTop:'20px'}}>
           {captains.map((member, i) => <>
             <Member key={i}>
-            <Avatar src={"http://127.0.0.1:8000"+member.profileImg} />
+            <Avatar src={BaseUrl+member.profileImg} />
               <Name>{member.membername}<br/><i>({member.role})</i></Name>
             </Member>
             <br />
@@ -65,7 +65,7 @@ const Team = () => {
 
           {heads.map((member, i) => <>
             <Member>
-            <Avatar src={"http://127.0.0.1:8000"+member.profileImg} />
+            <Avatar src={BaseUrl+member.profileImg} />
               <Name>{member.membername}<br/><i>({member.role})</i></Name>
             </Member>
             <br />
@@ -86,7 +86,7 @@ const Team = () => {
           {
             members.map((member,index)=>(
               <SwiperSlide className='slide' key={index}>
-                  <img className='sliderimg' src={"http://127.0.0.1:8000"+member.profileImg} alt=""/>
+                  <img className='sliderimg' src={BaseUrl+member.profileImg} alt=""/>
                   <Name>{member.membername} <br/><b><i>{member.role}</i></b></Name>
               </SwiperSlide>
                   ))
