@@ -15,8 +15,7 @@ import "swiper/modules/scrollbar/scrollbar.min.css";
 
 import './styles.css'
 const Team = () => {
-  const BaseUrl=process.env.BACKEND_BASE_URL;
-  console.log(process.env)
+  const BaseUrl="https://aero-server.herokuapp.com/";
   const [members, setMembers] = useState([]);
   const [advisor,setAdvisor]=useState([])
   const [captains,setCaptains]=useState([])
