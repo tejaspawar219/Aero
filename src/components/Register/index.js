@@ -9,6 +9,7 @@ const USER_ID = process.env.USER_ID;
 
 const Register = ({ show, handleClose }) => {
   const handleOnSubmit = (e) => {
+    console.log(SERVICE_ID)
     e.preventDefault();
     emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, e.target, USER_ID).then(
       (result) => {
