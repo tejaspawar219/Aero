@@ -18,7 +18,7 @@ function AeroZone() {
   useEffect(()=>{
     const BaseUrl="https://aero-server.herokuapp.com";
     const fetchPost=async ()=>{
-      const res=await axios.get(BaseUrl+'post')
+      const res=await axios.get(BaseUrl+'/post')
       const postlinks=[]
       for(let i=0;i<res.data.length;i++)
       {
