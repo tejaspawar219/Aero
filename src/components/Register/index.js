@@ -6,10 +6,10 @@ import emailjs from "emailjs-com";
 const SERVICE_ID = process.env.SERVICE_ID;
 const TEMPLATE_ID =process.env.TEMPLATE_ID;
 const USER_ID = process.env.USER_ID;
+console.log(SERVICE_ID)
 
 const Register = ({ show, handleClose }) => {
   const handleOnSubmit = (e) => {
-    console.log(SERVICE_ID)
     e.preventDefault();
     emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, e.target, USER_ID).then(
       (result) => {
