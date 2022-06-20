@@ -16,7 +16,7 @@ const html=(url)=>{
 function AeroZone() {
   const [posts,setPosts]=useState([])
   useEffect(()=>{
-    const BaseUrl=process.env.BACKEND_BASE_URL;
+    const BaseUrl="https://aero-server.herokuapp.com";
     const fetchPost=async ()=>{
       const res=await axios.get(BaseUrl+'post')
       const postlinks=[]

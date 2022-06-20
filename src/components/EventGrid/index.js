@@ -14,7 +14,7 @@ function NewlineText(props) {
 
 const EventInfo=({ show, handleClose, event})=>{
   
-  const BaseUrl=process.env.BACKEND_BASE_URL;
+  const BaseUrl="https://aero-server.herokuapp.com";
   const [images,setImages]=useState([])
   useEffect(() => {
     const fetchPosts=async ()=>{
@@ -55,7 +55,7 @@ const EventInfo=({ show, handleClose, event})=>{
 }
 
 function EventGrid() {
-  const BaseUrl=process.env.BACKEND_BASE_URL;
+  const BaseUrl="https://aero-server.herokuapp.com";
   const [show, setShow] = useState(false);
   const [event,setEvent] = useState([])
 
