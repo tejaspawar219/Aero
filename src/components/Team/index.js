@@ -15,7 +15,7 @@ import "swiper/modules/scrollbar/scrollbar.min.css";
 
 import './styles.css'
 const Team = () => {
-  const BaseUrl="https://aero-server.herokuapp.com/";
+  const BaseUrl="https://aero-server.herokuapp.com";
   const [members, setMembers] = useState([]);
   const [advisor,setAdvisor]=useState([])
   const [captains,setCaptains]=useState([])
@@ -23,7 +23,7 @@ const Team = () => {
  
   useEffect(() => {
     const fetchMembers = async () => {
-      const res = await axios.get(BaseUrl+"team/");
+      const res = await axios.get(BaseUrl+"/team/");
       console.log("HEY")
       setAdvisor(res.data.filter(mem=>mem.role==="Faculty Advisor")[0])
       setMembers(res.data.filter(mem=>mem.role==="Team Member"))
