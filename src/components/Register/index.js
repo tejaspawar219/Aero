@@ -3,9 +3,9 @@ import React from "react";
 import Swal from "sweetalert2";
 import emailjs from "emailjs-com";
 
-const SERVICE_ID = "service_8yb4fau";
-const TEMPLATE_ID = "template_hxx1v5c";
-const USER_ID = "user_CuuCousr83FhJjcKAnbG7";
+const SERVICE_ID = process.env.SERVICE_ID;
+const TEMPLATE_ID =process.env.TEMPLATE_ID;
+const USER_ID = process.env.USER_ID;
 
 const Register = ({ show, handleClose }) => {
   const handleOnSubmit = (e) => {
