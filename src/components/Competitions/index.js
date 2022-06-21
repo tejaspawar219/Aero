@@ -15,7 +15,7 @@ function NewlineText(props) {
   }
 
 const CompetitionSlide=({show,handleClose,competition})=>{
-    const BaseUrl="https://aero-server.herokuapp.com";
+    const BaseUrl="https://aero-server.herokuapp.com/";
     const [images,setImages]=useState([])
     useEffect(() => {
       const fetchPosts=async ()=>{
