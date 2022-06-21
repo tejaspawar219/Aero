@@ -59,7 +59,8 @@ const CompetitionSlide = ({ show, handleClose, competition }) => {
           images.map((item, index) => (
             <Carousel.Item interval={3000} key={index}>
               <img
-                className="d-block w-100"
+                className="d-block w-100 "
+                style={{ width:"100%", objectFit: "cover"}}
                 src={BaseUrl + item.img}
                 alt=""
               />
