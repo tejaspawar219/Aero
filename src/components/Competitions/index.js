@@ -40,13 +40,13 @@ function NewlineText(props) {
 }
 
 const CompetitionSlide = ({ show, handleClose, competition }) => {
-  const BaseUrl = "https://aero-server.herokuapp.com/";
+  const BaseUrl = "https://aero-server.herokuapp.com";
   const [images, setImages] = useState([]);
   useEffect(() => {
     const fetchPosts = async () => {
       const res =
         competition.length !== 0
-          ? await axios.get(BaseUrl + "compimg/" + competition.id)
+          ? await axios.get(BaseUrl + "/compimg/" + competition.id)
           : [];
       setImages(res.data);
     };
