@@ -5,6 +5,7 @@ export const HeaderBg = styled.div`
     background-color: rgba(17, 14, 83, 0.85);
     color: #fff;
     padding: 12px 20px;
+
 `
 
 export const Container = styled.div`
@@ -12,6 +13,7 @@ export const Container = styled.div`
     justify-content: center;
     width:100%;
     flex-wrap:wrap;
+    border:10px;
 `
 
 export const Member = styled.div`
@@ -19,9 +21,6 @@ export const Member = styled.div`
     height:280px;
     margin:0 20px;
     margin-bottom:50px;
-
-    
-
 `
 
 export const Avatar = styled.img`

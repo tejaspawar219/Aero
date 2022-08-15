@@ -24,23 +24,22 @@ import { Modal } from "react-bootstrap";
 
 function NewlineText(props) {
   const text = props.text;
-  return text
-    .split("\\n")
-    .map((str) => (
-      <div
-        style={{
-          display: "block",
-          color: "white",
-          fontWeight: props.b ? "700" : "500",
-        }}
-      >
-        {str}
-      </div>
-    ));
+  return text.split("\\n").map((str) => (
+    <div
+      style={{
+        display: "block",
+        color: "white",
+        fontWeight: props.b ? "700" : "500",
+      }}
+    >
+      {str}
+    </div>
+  ));
 }
 
 const CompetitionSlide = ({ show, handleClose, competition }) => {
-  const BaseUrl = "https://aero-server.herokuapp.com";
+  const ImgBaseUrl = process.env.BASEURL;
+  const BaseUrl = process.env.IMGBASEURL;
   const [images, setImages] = useState([]);
   useEffect(() => {
     const fetchPosts = async () => {
@@ -53,14 +52,15 @@ const CompetitionSlide = ({ show, handleClose, competition }) => {
     fetchPosts();
   }, [competition, BaseUrl]);
   return (
-    <Modal show={show} onHide={handleClose} centered size="lg">
+    <Modal show={show} onHide={handleClose} centered>
       <Carousel className="Slider">
         {images ? (
           images.map((item, index) => (
             <Carousel.Item interval={3000} key={index}>
               <img
-                style={{ width:"100%", objectFit: "cover"}}
-                src={BaseUrl + item.img}
+                className="d-block w-100"
+                style={{ aspectRatio: "3/2", objectFit: "cover" }}
+                src={ImgBaseUrl + item.img_id}
                 alt=""
               />
             </Carousel.Item>
@@ -74,7 +74,8 @@ const CompetitionSlide = ({ show, handleClose, competition }) => {
 };
 
 function Competitions() {
-  const BaseUrl = "https://aero-server.herokuapp.com";
+  const BaseUrl = process.env.BASEURL;
+  const ImgBaseUrl = process.env.IMGBASEURL;
   const [show, setShow] = useState(false);
   const [competitions, setCompetitions] = useState([]);
   const [competition, setCompetition] = useState([]);
@@ -127,7 +128,11 @@ function Competitions() {
               </Summary>
               <CenterSpace />
               <CompetitionImg
-                src={comp.poster_img ? `${BaseUrl}${comp.poster_img}` : ImgUrl}
+                src={
+                  comp.poster_img_id
+                    ? `${ImgBaseUrl}${comp.poster_img_id}`
+                    : ImgUrl
+                }
                 onClick={() => {
                   handleSelectEvent(index);
                   setShow(true);

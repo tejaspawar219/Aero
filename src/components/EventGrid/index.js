@@ -2,7 +2,6 @@ import React,{useState,useEffect} from 'react';
 import {Modal} from 'react-bootstrap'
 import {Wrapper,Heading,Line} from '../../pages/styles'
 import {More,EventHeading,Container,Event,EventImg,EventName,EventContent} from './EventGrid.styles'
-import ImgUrl from '../../assets/webinar.jpg'
 import Carousel from "react-bootstrap/Carousel";
 import axios from 'axios'
 import { Button } from '../HeroSection/HeroSection.styles';
@@ -13,8 +12,8 @@ function NewlineText(props) {
 }
 
 const EventInfo=({ show, handleClose, event})=>{
-  
-  const BaseUrl="https://aero-server.herokuapp.com";
+  const ImgBaseUrl=process.env.IMAGEBASEURL;
+  const BaseUrl=process.env.BASEURL;
   const [images,setImages]=useState([])
   useEffect(() => {
     const fetchPosts=async ()=>{
@@ -34,7 +33,7 @@ const EventInfo=({ show, handleClose, event})=>{
           <img
             className="d-block w-100 "
             style={{ aspectRatio: "3/2",objectFit:"cover" }}
-            src={BaseUrl+item.img}
+            src={ImgBaseUrl+item.img_id}
             alt=""
           />
         </Carousel.Item>
@@ -55,7 +54,8 @@ const EventInfo=({ show, handleClose, event})=>{
 }
 
 function EventGrid() {
-  const BaseUrl="https://aero-server.herokuapp.com";
+  const BaseUrl=process.env.BASEURL;
+  const ImgBaseUrl=process.env.IMAGEBASEURL;
   const [show, setShow] = useState(false);
   const [event,setEvent] = useState([])
 
@@ -63,7 +63,7 @@ function EventGrid() {
   
   useEffect(() => {
     const fetchPosts=async ()=>{
-        const res=await axios.get(BaseUrl+"event/");
+        const res=await axios.get(BaseUrl+"/event/");
         setWorkshops(res.data)
     }
     fetchPosts()
@@ -82,7 +82,7 @@ function EventGrid() {
 
         return(        
         <Event key={workshop.id} onClick={()=>{ handleSelectEvent(index);setShow(true)}}>
-          <EventImg src={ImgUrl}/>
+          <EventImg src={ImgBaseUrl+workshop.poster_img_id}/>
           <EventName>{workshop.eventname}</EventName>
           <More className='more'>More Info</More>
         </Event>

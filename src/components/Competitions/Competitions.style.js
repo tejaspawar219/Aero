@@ -11,7 +11,6 @@ export const Competition=styled.div`
         font-weight: 700;
     }
     @media only screen and (min-width: 700px){
-
         :hover{
             p{
                 display: block;
