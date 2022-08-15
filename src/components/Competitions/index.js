@@ -38,8 +38,8 @@ function NewlineText(props) {
 }
 
 const CompetitionSlide = ({ show, handleClose, competition }) => {
-  const ImgBaseUrl = process.env.BASEURL;
-  const BaseUrl = process.env.IMGBASEURL;
+  const BaseUrl = process.env.REACT_APP_BASEURL;
+  const ImgBaseUrl = process.env.REACT_APP_IMGBASEURL;
   const [images, setImages] = useState([]);
   useEffect(() => {
     const fetchPosts = async () => {
@@ -74,8 +74,8 @@ const CompetitionSlide = ({ show, handleClose, competition }) => {
 };
 
 function Competitions() {
-  const BaseUrl = process.env.BASEURL;
-  const ImgBaseUrl = process.env.IMGBASEURL;
+  const BaseUrl = process.env.REACT_APP_BASEURL;
+  const ImgBaseUrl = process.env.REACT_APP_IMGBASEURL;
   const [show, setShow] = useState(false);
   const [competitions, setCompetitions] = useState([]);
   const [competition, setCompetition] = useState([]);

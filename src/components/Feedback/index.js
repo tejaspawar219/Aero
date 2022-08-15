@@ -5,9 +5,9 @@ import { Container, Heading, FormContent } from "./Feedback.styles";
 import emailjs from "emailjs-com";
 import { Button, Form } from "react-bootstrap";
 
-const SERVICE_ID="service_9hcoo5d"
-const TEMPLATE_ID="template_xfxqvzf"
-const USER_ID="_18x-b3Mjjzcoe4mV"
+const SERVICE_ID=process.env.REACT_APP_SERVICE_ID
+const TEMPLATE_ID=process.env.REACT_APP_TEMPLATE_ID
+const USER_ID=process.env.REACT_APP_USER_ID
 function Feedback() {
   const handleOnSubmit = (e) => {
     e.preventDefault();

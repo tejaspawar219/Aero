@@ -16,7 +16,7 @@ const html=(url)=>{
 function AeroZone() {
   const [posts,setPosts]=useState([])
   useEffect(()=>{
-    const BaseUrl=process.env.BASEURL;
+    const BaseUrl=process.env.REACT_APP_BASEURL;
     const fetchPost=async ()=>{
       const res=await axios.get(BaseUrl+'/post')
       const postlinks=[]

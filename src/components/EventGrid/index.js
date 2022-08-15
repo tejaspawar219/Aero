@@ -13,7 +13,7 @@ function NewlineText(props) {
 
 const EventInfo=({ show, handleClose, event})=>{
   const ImgBaseUrl=process.env.IMAGEBASEURL;
-  const BaseUrl=process.env.BASEURL;
+  const BaseUrl=process.env.REACT_APP_BASEURL;
   const [images,setImages]=useState([])
   useEffect(() => {
     const fetchPosts=async ()=>{
@@ -54,8 +54,8 @@ const EventInfo=({ show, handleClose, event})=>{
 }
 
 function EventGrid() {
-  const BaseUrl=process.env.BASEURL;
-  const ImgBaseUrl=process.env.IMAGEBASEURL;
+  const BaseUrl=process.env.REACT_APP_BASEURL;
+  const ImgBaseUrl=process.env.REACT_APP_IMGBASEURL;
   const [show, setShow] = useState(false);
   const [event,setEvent] = useState([])
 
