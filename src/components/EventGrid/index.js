@@ -64,8 +64,6 @@ function EventGrid() {
   useEffect(() => {
     const fetchPosts=async ()=>{
         const res=await axios.get(BaseUrl+"/event/");
-        console.log(BaseUrl)
-        console.log(res.data)
         setWorkshops(res.data)
     }
     fetchPosts()
