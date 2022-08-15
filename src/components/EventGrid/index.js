@@ -12,7 +12,7 @@ function NewlineText(props) {
 }
 
 const EventInfo=({ show, handleClose, event})=>{
-  const ImgBaseUrl=process.env.IMAGEBASEURL;
+  const ImgBaseUrl=process.env.REACT_APP_IMGBASEURL;
   const BaseUrl=process.env.REACT_APP_BASEURL;
   const [images,setImages]=useState([])
   useEffect(() => {
