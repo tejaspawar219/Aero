@@ -28,7 +28,7 @@ const Team = () => {
       setMembers(res.data.filter((mem) => mem.role === "Team Member"));
       setCaptains(
         res.data.filter(
-          (mem) => mem.role === "Captain" || mem.role === "Vice Captain"
+          (mem) => mem.role === "President" || mem.role === "Vice President"
         )
       );
       setHeads(
