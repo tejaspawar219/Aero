@@ -15,9 +15,9 @@ function Footer(props) {
       <Wrapper>
         <Text>
           Contact <br />
-          +91 8208375895
+          +91 82083 75895
           <br />
-          +91 7400259238
+          +91 74002 59238
           <br />
           aerorgit@gmail.com
         </Text>
